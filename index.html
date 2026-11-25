@@ -40,7 +40,7 @@ a{text-decoration:none;color:inherit}
 .btn-a{background:var(--tan);color:var(--ink)}.btn-w{background:#25d366;color:#fff}.btn-o{border:2px solid #fff;color:#fff;background:transparent}
 .loc{margin-top:22px;color:#b9cbe0;font-size:15px}
 /* ticker */
-.tick{background:var(--tan);color:var(--ink);transform:rotate(-1.2deg);margin:-14px -10px 0;position:relative;z-index:5;overflow:hidden;white-space:nowrap;border-block:3px solid var(--ink);font-weight:800;padding:8px 0}
+.tick{background:var(--tan);color:var(--ink);margin:0;position:relative;z-index:5;overflow:hidden;white-space:nowrap;border-block:3px solid var(--ink);font-weight:800;padding:8px 0}
 .tick div{display:inline-block;animation:mq 40s linear infinite;padding-inline-start:100%}
 @keyframes mq{to{transform:translateX(100%)}}
 /* stats */
@@ -114,9 +114,9 @@ h2::after{content:"";display:block;width:70px;height:5px;background:var(--tan);m
 .cta .big{font-size:38px;font-weight:900;color:var(--tan);direction:ltr;display:block;margin:12px 0}
 footer{background:#071730;color:#9fb3c8;text-align:center;padding:24px 0;font-size:15px}
 footer a{color:var(--tan)}
-.float{position:fixed;bottom:18px;inset-inline:18px;display:flex;justify-content:flex-start;pointer-events:none;z-index:30}
+.float{position:fixed;bottom:18px;left:18px;right:18px;direction:ltr;display:flex;justify-content:flex-start;pointer-events:none;z-index:30}
 .float a,.float button{pointer-events:auto;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;border:0;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.3);cursor:pointer}
-.float .w{background:#25d366}.float .c{background:var(--tan);color:var(--ink);margin-inline-start:12px}.float .t{background:var(--navy);margin-inline-start:auto}.ic{flex:none}
+.float .w{background:#25d366}.float .c{background:var(--tan);color:var(--ink);margin-left:12px}.float .t{background:var(--navy);margin-left:auto}.ic{flex:none}
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;place-items:center;z-index:60;cursor:zoom-out}
 #lb img{max-width:92vw;max-height:90vh;border-radius:10px}
 .rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.in{opacity:1;transform:none}
@@ -139,6 +139,7 @@ footer a{color:var(--tan)}
 @keyframes iup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes ibar{from{width:0}to{width:100%}}
 @media(prefers-reduced-motion:reduce){.intro{display:none}}
+
 </style>
 </head>
 <body>
@@ -276,7 +277,7 @@ footer a{color:var(--tan)}
 </form>
 </div></section>
 
-<footer>© دباب نقل عفش ابو زايد السلماني، حي السلام، جدة | تصميم <a href="https://devora-web.online/">Devora Web</a></footer>
+<footer>© دباب نقل عفش ابو زايد السلماني، حي السلام، جدة | تم التصميم بواسطة شركة <a href="https://www.facebook.com/share/18yncckHvt/" target="_blank" rel="noopener">ويبورا ويب</a></footer>
 <div class="float"><a class="w" href="https://wa.me/966568079916" aria-label="واتساب"><svg class="ic" viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 15l-.3-.18-3.1.82.83-3.03-.2-.31A8.1 8.1 0 0 1 12.04 3.8zM8.6 7.4c-.2 0-.5.07-.75.35-.25.27-.97.95-.97 2.3s1 2.7 1.13 2.88c.14.18 1.95 3.1 4.8 4.2 2.4.94 2.88.75 3.4.7.52-.05 1.67-.68 1.9-1.34.23-.66.23-1.22.16-1.34-.07-.12-.25-.18-.52-.32s-1.67-.82-1.93-.91c-.25-.1-.43-.14-.62.14-.18.27-.7.9-.86 1.1-.16.18-.32.2-.6.07-.27-.14-1.15-.42-2.2-1.35-.8-.72-1.36-1.6-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.4-.48.14-.16.18-.27.27-.45.1-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.54-.45-.46-.62-.47z"/></svg></a><a class="c" href="tel:+966568079916" aria-label="اتصال"><svg class="ic" viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></a><button class="t" id="up" aria-label="للأعلى"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></div>
 <div id="lb"><img alt=""></div>
 <script>
@@ -289,8 +290,9 @@ document.querySelectorAll('.gal img').forEach(i=>i.onclick=()=>{li.src=i.src;lb.
 lb.onclick=()=>lb.style.display='none';
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.rv').forEach(e=>io.observe(e));
-const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const to=+e.target.dataset.to,t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/2200);e.target.textContent=(e.target.dataset.pre||'')+Math.round(to*(1-Math.pow(1-k,3)))+(e.target.dataset.suf||'');if(k<1)requestAnimationFrame(f)})(t0)}),{threshold:.5});
-if(!matchMedia('(prefers-reduced-motion:reduce)').matches&&location.hash!='#shot'){document.querySelectorAll('.num[data-to]').forEach(e=>{e.textContent=(e.dataset.pre||'')+'0'+(e.dataset.suf||'');cio.observe(e)})}
+const run=e=>{const to=+e.dataset.to,t0=performance.now(),id=e._r=(e._r||0)+1;(function f(t){if(e._r!=id)return;const k=Math.min(1,(t-t0)/2400);e.textContent=(e.dataset.pre||'')+Math.round(to*(1-Math.pow(1-k,3)))+(e.dataset.suf||'');if(k<1)requestAnimationFrame(f)})(t0)};
+const cio=new IntersectionObserver(es=>es.forEach(e=>{const x=e.target;if(e.isIntersecting){run(x)}else{x._r=(x._r||0)+1;x.textContent=(x.dataset.pre||'')+'0'+(x.dataset.suf||'')}}),{threshold:.4});
+if(location.hash!='#shot'){document.querySelectorAll('.num[data-to]').forEach(e=>{e.textContent=(e.dataset.pre||'')+'0'+(e.dataset.suf||'');cio.observe(e)})}
 const norm=s=>s.replace(/[\u0660-\u0669]/g,d=>d.charCodeAt(0)-1632).replace(/[\u06f0-\u06f9]/g,d=>d.charCodeAt(0)-1776);
 $('#hs').oninput=e=>{const q=e.target.value.trim();document.querySelectorAll('.chip').forEach(c=>c.style.display=c.dataset.h.includes(q)?'':'none')};
 document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{$('#h').value=c.dataset.h;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===c));$('#order').scrollIntoView({behavior:'smooth'})});
