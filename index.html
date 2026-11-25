@@ -46,7 +46,7 @@ a{text-decoration:none;color:inherit}
 /* stats */
 .stats{background:var(--ink);color:#cfdcec;padding:4.5rem 0 3.5rem;text-align:center}
 .stats .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px}
-.num.txt{line-height:1.6;padding-bottom:6px;font-size:52px}.num{unicode-bidi:isolate;font-size:64px;font-weight:900;color:transparent;-webkit-text-stroke:2px var(--tan);line-height:1.1}
+.num.txt{line-height:1.6;padding-bottom:6px;font-size:52px;color:var(--tan);-webkit-text-stroke:0}.num{unicode-bidi:isolate;font-size:64px;font-weight:900;color:transparent;-webkit-text-stroke:2px var(--tan);line-height:1.1}
 .stats small{display:block;font-size:17px;color:#e3ecf7}
 /* sections */
 .sec{padding:70px 0}.sec-alt{background:var(--cream)}
@@ -129,9 +129,21 @@ footer a{color:var(--tan)}
 .hero-bg{width:52%;left:0;right:auto;object-position:center 45%}@media(max-width:1024px){.hero{flex-direction:column;align-items:stretch;min-height:0}.hero-bg{position:relative;inset:auto;width:100%;height:300px;object-position:center 42%;animation:none}.hero-panel{background:var(--ink)!important}}
 @media(max-width:640px){.num{font-size:44px}.wrap{padding:0 16px}.stats .grid{grid-template-columns:repeat(2,1fr)}.hero .btn{flex:1 1 100%;justify-content:center}.arts,.cards,.tips{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.intro{position:fixed;inset:0;z-index:999;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;color:#fff;text-align:center;cursor:pointer;transition:transform .7s cubic-bezier(.77,0,.18,1),opacity .4s .4s}
+.intro.out{transform:translateY(-100%);opacity:0;pointer-events:none}
+.intro .lg{width:120px;height:120px;border-radius:26px;background:#fff;padding:8px;object-fit:contain;animation:ipop .9s cubic-bezier(.2,1.4,.4,1) both}
+.intro b{font-size:24px;padding:0 20px;line-height:1.5;animation:iup .7s .35s both}.intro small{color:var(--tan);font-size:16px;animation:iup .7s .55s both}
+.intro .bar{width:min(260px,60vw);height:4px;background:rgba(255,255,255,.15);border-radius:4px;overflow:hidden}.intro .bar i{display:block;height:100%;background:var(--tan);animation:ibar 1.5s .2s ease-out both}
+.intro .rd{position:absolute;bottom:0;inset-inline:0;height:10px;background:repeating-linear-gradient(-45deg,var(--tan) 0 18px,var(--ink) 18px 36px);animation:iup .6s both}
+@keyframes ipop{from{opacity:0;transform:scale(.4) rotate(-12deg)}to{opacity:1;transform:none}}
+@keyframes iup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes ibar{from{width:0}to{width:100%}}
+@media(prefers-reduced-motion:reduce){.intro{display:none}}
 </style>
 </head>
 <body>
+<div class="intro" id="intro" aria-hidden="true"><img class="lg" src="img/logo.png" alt=""><b>دباب نقل عفش ابو زايد السلماني</b><small>جدة • حي السلام</small><div class="bar"><i></i></div><div class="rd"></div></div>
+
 <header class="nav"><div class="wrap">
 <a class="brand" href="#home"><img src="img/logo-w.png" alt="شعار دباب نقل عفش ابو زايد السلماني"><span><b>ابو زايد السلماني</b><small>دباب نقل عفش بجدة</small></span></a>
 <nav class="menu" id="menu"><a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#process">الخطوات</a><a href="#works">صور</a><a href="#areas">الأحياء</a><a href="#articles">المقالات</a><a href="#faq">الأسئلة</a><a href="#order">اطلب الآن</a></nav>
@@ -233,7 +245,7 @@ footer a{color:var(--tan)}
 
 <section class="sec sec-alt" id="articles"><div class="wrap">
 <h2>مقالات عن النقل</h2><p class="lead">معلومات عامة تساعدك قبل النقلة.</p>
-<div class="arts"><a class="art rv" href="articles/a1.html"><img src="img/p7464403.jpg" alt="كيف تستعد لنقل العفش داخل جدة" loading="lazy"><div><h3>كيف تستعد لنقل العفش داخل جدة</h3><p>خطوات عملية تسبق يوم النقل لتكون النقلة أهدأ وأسرع.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a2.html"><img src="img/p4391486.jpg" alt="كيف تحمي أثاث غرف النوم أثناء النقل" loading="lazy"><div><h3>كيف تحمي أثاث غرف النوم أثناء النقل</h3><p>نصائح بسيطة تقلل الخدوش والأضرار في السرير والدواليب.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a3.html"><img src="img/p15016523.jpg" alt="ما تحتاج معرفته قبل فك وتركيب المكيفات" loading="lazy"><div><h3>ما تحتاج معرفته قبل فك وتركيب المكيفات</h3><p>أسئلة تفيدك عند نقل مكيف من مكان إلى آخر.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a4.html"><img src="img/p7203774.jpg" alt="كيف تتفق على موعد وسعر النقل بوضوح" loading="lazy"><div><h3>كيف تتفق على موعد وسعر النقل بوضوح</h3><p>أسئلة تطرحها قبل أن تؤكد النقلة.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a5.html"><img src="img/p7218106.jpg" alt="نصائح لتغليف الأغراض الصغيرة والأدوات المنزلية" loading="lazy"><div><h3>نصائح لتغليف الأغراض الصغيرة والأدوات المنزلية</h3><p>طريقة تنظيم الكراتين لتصل أغراضك سليمة.</p><span>اقرأ المقال ←</span></div></a></div>
+<div class="arts"><a class="art rv" href="articles/a1.html"><img src="img/p7464403.jpg" alt="كيف تستعد لنقل العفش داخل جدة" loading="lazy"><div><h3>كيف تستعد لنقل العفش داخل جدة</h3><p>خطوات عملية تسبق يوم النقل لتكون النقلة أهدأ وأسرع.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a2.html"><img src="img/p4391486.jpg" alt="كيف تحمي أثاث غرف النوم أثناء النقل" loading="lazy"><div><h3>كيف تحمي أثاث غرف النوم أثناء النقل</h3><p>نصائح بسيطة تقلل الخدوش والأضرار في السرير والدواليب.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a3.html"><img src="img/p7347538.jpg" alt="ما تحتاج معرفته قبل فك وتركيب المكيفات" loading="lazy"><div><h3>ما تحتاج معرفته قبل فك وتركيب المكيفات</h3><p>أسئلة تفيدك عند نقل مكيف من مكان إلى آخر.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a4.html"><img src="img/p7203774.jpg" alt="كيف تتفق على موعد وسعر النقل بوضوح" loading="lazy"><div><h3>كيف تتفق على موعد وسعر النقل بوضوح</h3><p>أسئلة تطرحها قبل أن تؤكد النقلة.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a5.html"><img src="img/p7218106.jpg" alt="نصائح لتغليف الأغراض الصغيرة والأدوات المنزلية" loading="lazy"><div><h3>نصائح لتغليف الأغراض الصغيرة والأدوات المنزلية</h3><p>طريقة تنظيم الكراتين لتصل أغراضك سليمة.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a6.html"><img src="img/p7415108.jpg" alt="كيف تحمي الكنب والأريكة أثناء النقل" loading="lazy"><div><h3>كيف تحمي الكنب والأريكة أثناء النقل</h3><p>تغطية وتثبيت تحمي القماش والأرجل من الخدوش.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a7.html"><img src="img/p15016523.jpg" alt="كيف تغلف القطع الكبيرة بالكراتين والبلاستيك" loading="lazy"><div><h3>كيف تغلف القطع الكبيرة بالكراتين والبلاستيك</h3><p>التغليف الجيد يحمي القطع الكبيرة قبل وصولها.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a8.html"><img src="img/p7491085.jpg" alt="كيف يتم فك وتركيب الأسرّة والإطارات الخشبية" loading="lazy"><div><h3>كيف يتم فك وتركيب الأسرّة والإطارات الخشبية</h3><p>خطوات تساعد على فك الأسرّة وإعادة تركيبها بدون ضياع قطع.</p><span>اقرأ المقال ←</span></div></a></div>
 </div></section>
 <section class="sec faq" id="faq"><div class="wrap">
 <h2>أسئلة يسألها عملاؤنا</h2><p class="lead">إجابات سريعة. وإن لم تجد سؤالك راسلنا.</p>
@@ -293,5 +305,6 @@ if(Object.keys(er).length)return;
 const url='https://wa.me/'+WA+'?text='+encodeURIComponent(buildMsg(v));
 if(window.__dryRun){window.__lastUrl=url;return}
 window.open(url,'_blank','noopener')};
+(function(){var i=document.getElementById('intro');if(!i)return;if(location.hash=='#shot'){i.remove();return}var d=function(){i.classList.add('out');setTimeout(function(){i.remove()},1200)};i.onclick=d;setTimeout(d,1900)})();
 </script>
 </body></html>
