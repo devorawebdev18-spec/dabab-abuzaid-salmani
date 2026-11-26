@@ -61,6 +61,8 @@ h2::after{content:"";display:block;width:70px;height:5px;background:var(--tan);m
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
 .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px}
 .card .ic{width:56px;height:56px;border-radius:14px;background:var(--ink);color:var(--tan);display:grid;place-items:center;margin-bottom:14px}
+.svc{padding:0;overflow:hidden}.svc img{width:100%;height:190px;object-fit:cover;display:block}.svc h3,.svc p{padding:0 22px}.svc h3{margin-top:16px}.svc p{padding-bottom:22px}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.rev{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}.rev .stars{color:var(--tan);font-size:22px;letter-spacing:2px}.rev p{margin:10px 0;color:var(--ink)}.rev b{color:var(--mut);font-size:15px}
 .card h3{font-size:22px;color:var(--ink)}.card p{color:var(--mut)}
 .feature{background:linear-gradient(rgba(12,35,64,.86),rgba(12,35,64,.86)),url(img/p7464403.jpg) center/cover;color:#fff}
 .feature h2{color:#fff}.feature p{color:#d6e2f0;max-width:700px;margin-top:14px;font-size:18px}
@@ -149,7 +151,7 @@ footer a{color:var(--tan)}
 
 <header class="nav"><div class="wrap">
 <a class="brand" href="#home"><img src="img/logo-w.png" alt="شعار دباب نقل عفش ابو زايد السلماني"><span><b>ابو زايد السلماني</b><small>دباب نقل عفش بجدة</small></span></a>
-<nav class="menu" id="menu"><a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#process">الخطوات</a><a href="#works">صور</a><a href="#areas">الأحياء</a><a href="#articles">المقالات</a><a href="#faq">الأسئلة</a><a href="#order">اطلب الآن</a></nav>
+<nav class="menu" id="menu"><a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#process">الخطوات</a><a href="#works">صور</a><a href="#reviews">آراء العملاء</a><a href="#areas">الأحياء</a><a href="#articles">المقالات</a><a href="#faq">الأسئلة</a><a href="#order">اطلب الآن</a></nav>
 <button class="burger" id="burger" aria-label="القائمة"><i></i><i></i><i></i></button>
 </div></header>
 
@@ -191,12 +193,8 @@ footer a{color:var(--tan)}
 </div></section>
 
 <section class="sec sec-alt" id="services"><div class="wrap">
-<h2>خدماتنا</h2><p class="lead">ثلاث خدمات نقدمها في جدة.</p>
-<div class="cards">
-<div class="card rv"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h13v10H1zM14 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div><h3>نقل عفش</h3><p>نحمّل أثاثك وننقله إلى مكانك الجديد داخل جدة.</p></div>
-<div class="card rv"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.5"/></svg></div><h3>نقل غرف النوم</h3><p>ننقل غرف النوم بعناية إلى مكانك الجديد.</p></div>
-<div class="card rv"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="8" rx="2"/><path d="M6 16v2M12 16v4M18 16v2"/></svg></div><h3>فك وتركيب المكيفات</h3><p>نفك المكيف في مكانك القديم ونركّبه في المكان الجديد.</p></div>
-</div></div></section>
+<h2>خدماتنا</h2><p class="lead">خدمات النقل التي نقدمها في جدة. الصور توضيحية.</p>
+<div class="cards"><div class="card svc rv"><img src="img/p7464403.jpg" alt="نقل عفش" loading="lazy"><h3>نقل عفش</h3><p>نحمّل عفشك وننقله إلى مكانك الجديد داخل جدة.</p></div><div class="card svc rv"><img src="img/p7491085.jpg" alt="غرف نوم وفك وتركيب" loading="lazy"><h3>غرف نوم وفك وتركيب</h3><p>ننقل غرف النوم ونفك الأسرّة والدواليب ونركّبها في مكانها الجديد.</p></div><div class="card svc rv"><img src="img/p15016523.jpg" alt="التغليف" loading="lazy"><h3>التغليف</h3><p>نغلّف الأثاث والقطع الكبيرة لتصل محمية.</p></div><div class="card svc rv"><img src="img/p7347538.jpg" alt="نقل وفك وتركيب المكيفات" loading="lazy"><h3>نقل وفك وتركيب المكيفات</h3><p>نفك المكيف في مكانك القديم ونركّبه في المكان الجديد.</p></div><div class="card svc rv"><img src="img/p7217937.jpg" alt="نقل المطابخ" loading="lazy"><h3>نقل المطابخ</h3><p>ننقل المطبخ وأغراضه بعناية.</p></div><div class="card svc rv"><img src="img/p7464236.jpg" alt="نقل جميع الأثاث" loading="lazy"><h3>نقل جميع الأثاث</h3><p>ننقل جميع أنواع الأثاث من كنب وغرف وغيرها.</p></div></div></div></section>
 
 <section class="sec feature" id="why"><div class="wrap rv">
 <h2>اطلب نقل عفشك وأنت مرتاح</h2>
@@ -255,6 +253,10 @@ footer a{color:var(--tan)}
 <h2>مقالات عن النقل</h2><p class="lead">معلومات عامة تساعدك قبل النقلة.</p>
 <div class="arts"><a class="art rv" href="articles/a1.html"><img src="img/p7464403.jpg" alt="كيف تستعد لنقل العفش داخل جدة" loading="lazy"><div><h3>كيف تستعد لنقل العفش داخل جدة</h3><p>خطوات عملية تسبق يوم النقل لتكون النقلة أهدأ وأسرع.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a2.html"><img src="img/p4391486.jpg" alt="كيف تحمي أثاث غرف النوم أثناء النقل" loading="lazy"><div><h3>كيف تحمي أثاث غرف النوم أثناء النقل</h3><p>نصائح بسيطة تقلل الخدوش والأضرار في السرير والدواليب.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a3.html"><img src="img/p7347538.jpg" alt="ما تحتاج معرفته قبل فك وتركيب المكيفات" loading="lazy"><div><h3>ما تحتاج معرفته قبل فك وتركيب المكيفات</h3><p>أسئلة تفيدك عند نقل مكيف من مكان إلى آخر.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a4.html"><img src="img/p7203774.jpg" alt="كيف تتفق على موعد وسعر النقل بوضوح" loading="lazy"><div><h3>كيف تتفق على موعد وسعر النقل بوضوح</h3><p>أسئلة تطرحها قبل أن تؤكد النقلة.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a5.html"><img src="img/p7218106.jpg" alt="نصائح لتغليف الأغراض الصغيرة والأدوات المنزلية" loading="lazy"><div><h3>نصائح لتغليف الأغراض الصغيرة والأدوات المنزلية</h3><p>طريقة تنظيم الكراتين لتصل أغراضك سليمة.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a6.html"><img src="img/p7415108.jpg" alt="كيف تحمي الكنب والأريكة أثناء النقل" loading="lazy"><div><h3>كيف تحمي الكنب والأريكة أثناء النقل</h3><p>تغطية وتثبيت تحمي القماش والأرجل من الخدوش.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a7.html"><img src="img/p15016523.jpg" alt="كيف تغلف القطع الكبيرة بالكراتين والبلاستيك" loading="lazy"><div><h3>كيف تغلف القطع الكبيرة بالكراتين والبلاستيك</h3><p>التغليف الجيد يحمي القطع الكبيرة قبل وصولها.</p><span>اقرأ المقال ←</span></div></a><a class="art rv" href="articles/a8.html"><img src="img/p7491085.jpg" alt="كيف يتم فك وتركيب الأسرّة والإطارات الخشبية" loading="lazy"><div><h3>كيف يتم فك وتركيب الأسرّة والإطارات الخشبية</h3><p>خطوات تساعد على فك الأسرّة وإعادة تركيبها بدون ضياع قطع.</p><span>اقرأ المقال ←</span></div></a></div>
 </div></section>
+<section class="sec sec-alt" id="reviews"><div class="wrap">
+<h2>آراء العملاء</h2><p class="lead">نماذج لشكل القسم، وستُستبدل بآراء عملاء حقيقيين بعد جمعها.</p>
+<div class="revs"><div class="rev rv"><div class="stars" aria-hidden="true">★★★★★</div><p>خدمة منظمة وسريعة، والأثاث وصل بحالة ممتازة.</p><b>عميل من جدة</b></div><div class="rev rv"><div class="stars" aria-hidden="true">★★★★★</div><p>تعامل محترم والتزام بالموعد وفك وتركيب المكيفات بشكل جيد.</p><b>عميل من جدة</b></div><div class="rev rv"><div class="stars" aria-hidden="true">★★★★★</div><p>نقل غرف النوم تم بعناية وبدون أي خدوش.</p><b>عميل من جدة</b></div><div class="rev rv"><div class="stars" aria-hidden="true">★★★★★</div><p>التغليف كان ممتازاً ولم تتضرر أي قطعة أثناء النقل.</p><b>عميل من جدة</b></div><div class="rev rv"><div class="stars" aria-hidden="true">★★★★★</div><p>رد سريع على الواتساب وسعر واضح قبل البدء.</p><b>عميل من جدة</b></div><div class="rev rv"><div class="stars" aria-hidden="true">★★★★★</div><p>فريق محترم ونقل جميع الأثاث تم في وقت مناسب.</p><b>عميل من جدة</b></div></div></div></section>
+
 <section class="sec faq" id="faq"><div class="wrap">
 <h2>أسئلة يسألها عملاؤنا</h2><p class="lead">إجابات سريعة. وإن لم تجد سؤالك راسلنا.</p>
 <details open><summary>ما الخدمات التي تقدمونها؟</summary><p>ننقل العفش وغرف النوم، ونفك ونركّب المكيفات عند الطلب.</p></details>
